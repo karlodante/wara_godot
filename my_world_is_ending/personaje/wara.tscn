@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://db7fb186kws82"]
+
+[ext_resource type="Texture2D" uid="uid://dtcw6syoan7bi" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 1.png" id="1_7as5a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7o7t"]
+size = Vector2(763.41113, 1046.411)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7837i"]
+radius = 40.012497
+
+[node name="Wara" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(45.749996, 580.125)
+scale = Vector2(0.059523825, 0.049852073)
+texture = ExtResource("1_7as5a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(78.50001, 565.50006)
+scale = Vector2(0.13492073, 0.10798826)
+shape = SubResource("RectangleShape2D_j7o7t")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(85.00001, 477)
+scale = Vector2(1.206989, 0.9565575)
+shape = SubResource("CircleShape2D_7837i")

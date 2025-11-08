@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmemv08xun6s7"]
+
+[ext_resource type="Texture2D" uid="uid://cingw21ciobqb" path="res://my_world_is_ending/texturas/Tiles/tile_0036.png" id="1_c42g5"]
+[ext_resource type="Texture2D" uid="uid://cugejgf2fkhc0" path="res://my_world_is_ending/esenario/WhatsApp Image 2025-11-08 at 9.55.18 AM.jpeg" id="1_uh3fc"]
+[ext_resource type="Texture2D" uid="uid://culvfkrklkuby" path="res://my_world_is_ending/texturas/Tiles/PNG Dirt/dirtHalfLeft.png" id="2_uh3fc"]
+[ext_resource type="Texture2D" uid="uid://dj573423ednii" path="res://my_world_is_ending/texturas/Tiles/PNG Dirt/dirtHalfMid.png" id="3_pmxmm"]
+[ext_resource type="PackedScene" uid="uid://db7fb186kws82" path="res://my_world_is_ending/personaje/wara.tscn" id="5_pmxmm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r73aq"]
+size = Vector2(132.38567, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vqeco"]
+size = Vector2(1818, 45.5)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(-113, -39)
+
+[node name="WhatsAppImage20251108At9_55_18Am" type="Sprite2D" parent="."]
+position = Vector2(2, -277)
+scale = Vector2(0.8953125, 0.684375)
+texture = ExtResource("1_uh3fc")
+metadata/_edit_lock_ = true
+
+[node name="Tile0036" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(11, -28)
+scale = Vector2(72.734375, 8.273438)
+texture = ExtResource("1_c42g5")
+
+[node name="DirtHalfLeft" type="Sprite2D" parent="."]
+position = Vector2(-790, 78)
+texture = ExtResource("2_uh3fc")
+
+[node name="DirtHalfMid" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-268.375, -62)
+scale = Vector2(8.667857, 1)
+texture = ExtResource("3_pmxmm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(2.2500305, 14)
+scale = Vector2(8.667857, 1)
+shape = SubResource("RectangleShape2D_r73aq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(334, 15.25)
+shape = SubResource("RectangleShape2D_vqeco")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(4, -283)
+
+[node name="Wara" parent="." instance=ExtResource("5_pmxmm")]
+position = Vector2(-379, -630)
