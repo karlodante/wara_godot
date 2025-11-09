@@ -9,7 +9,7 @@ extends CharacterBody2D
 # --------------------------------------
 #  SALTO MEJORADO
 # --------------------------------------
-@export var jump_force: float = 500.0
+@export var jump_force: float = 600.0
 @export var jump_cut_multiplier: float = 0.5
 @export var coyote_time: float = 0.1
 @export var jump_buffer: float = 0.1

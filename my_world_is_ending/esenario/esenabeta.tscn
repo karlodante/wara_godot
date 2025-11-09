@@ -1,27 +1,39 @@
-[gd_scene load_steps=33 format=3 uid="uid://dmemv08xun6s7"]
+[gd_scene load_steps=75 format=3 uid="uid://dmemv08xun6s7"]
 
 [ext_resource type="Script" uid="uid://dclfw4fqgxwl1" path="res://my_world_is_ending/esenario/character_body_2d.gd" id="1_5e0wm"]
 [ext_resource type="Texture2D" uid="uid://cugejgf2fkhc0" path="res://my_world_is_ending/esenario/WhatsApp Image 2025-11-08 at 9.55.18 AM.jpeg" id="1_uh3fc"]
 [ext_resource type="Texture2D" uid="uid://bvqyatl333fbc" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 4.png" id="2_a4ynv"]
 [ext_resource type="Script" uid="uid://5nh3tgvxm3ss" path="res://my_world_is_ending/esenario/camera_2d.gd" id="2_c42g5"]
 [ext_resource type="Script" uid="uid://bdeowtamdr620" path="res://my_world_is_ending/esenario/parallax_background.gd" id="2_d1x01"]
-[ext_resource type="Texture2D" uid="uid://2cf8rtxvgdra" path="res://imagenesdemenu del juego/waraAtaque3.png" id="2_gw8uv"]
+[ext_resource type="Texture2D" uid="uid://bjpeque1o724r" path="res://imagenesdemenu del juego/waraAtaque3.png" id="2_gw8uv"]
 [ext_resource type="Texture2D" uid="uid://cogofuu560e00" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 7.png" id="2_qap7n"]
+[ext_resource type="Texture2D" uid="uid://dfdl474ndnwa1" path="res://imagenesdemenu del juego/plataforma2.png" id="2_uaot8"]
 [ext_resource type="Texture2D" uid="uid://dtcw6syoan7bi" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 1.png" id="4_5e0wm"]
 [ext_resource type="Texture2D" uid="uid://dl3moh6h2gpnx" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 3.png" id="4_qap7n"]
 [ext_resource type="Texture2D" uid="uid://cn01epggdk65r" path="res://imagenesdemenu del juego/waraAtaque1.png" id="4_wpix8"]
 [ext_resource type="Texture2D" uid="uid://cw7nvqaukrjm0" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 5.png" id="6_fhk0l"]
-[ext_resource type="Texture2D" uid="uid://c7phxk3s0yxp4" path="res://imagenesdemenu del juego/wara1.png" id="6_uxgku"]
 [ext_resource type="Texture2D" uid="uid://fhjmnqtdoaik" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 6.png" id="7_5bxl3"]
+[ext_resource type="Texture2D" uid="uid://cb0yg3ia1lbuc" path="res://imagenesdemenu del juego/wara1tipodahs (1).png" id="8_gw8uv"]
 [ext_resource type="Texture2D" uid="uid://cr2w3aqcj6f71" path="res://my_world_is_ending/esenario/WhatsApp Image 2025-11-08 at 9.55.19 AM.jpeg" id="11_qap7n"]
 [ext_resource type="Texture2D" uid="uid://xhugthqqtky8" path="res://imagenesdemenu del juego/negro-5686e4bf3df78ccc15019c28.jpg" id="12_x0gaw"]
 [ext_resource type="Texture2D" uid="uid://bdydcn2cdikod" path="res://imagenesdemenu del juego/WhatsApp Image 2025-11-08 at 9.55.19 AM (1).jpeg" id="13_8i8up"]
+[ext_resource type="Texture2D" uid="uid://cqb3dvd1sqo6l" path="res://imagenesdemenu del juego/wara2tipodash.png" id="13_h4byp"]
 [ext_resource type="Texture2D" uid="uid://pq7kfj4wgqtc" path="res://imagenesdemenu del juego/minero1.jpeg" id="13_n6tl0"]
 [ext_resource type="Texture2D" uid="uid://cp7ksf1yirks" path="res://imagenesdemenu del juego/grafico 3.png" id="14_8saor"]
 [ext_resource type="Texture2D" uid="uid://bww60r5u1fisg" path="res://imagenesdemenu del juego/WhatsApp Image 2025-11-08 at 9.55.20 AM.jpeg" id="14_t6cv0"]
+[ext_resource type="Texture2D" uid="uid://xsqtecsdvd8o" path="res://my_world_is_ending/YACASI/sprites1/png1-removebg-preview.png" id="15_4frcf"]
 [ext_resource type="Texture2D" uid="uid://nq3eve4qombx" path="res://imagenesdemenu del juego/Grafico 2.png" id="15_8i8up"]
-[ext_resource type="Texture2D" uid="uid://oechkonodc13" path="res://imagenesdemenu del juego/wara1tipodahs.png" id="15_uaot8"]
 [ext_resource type="Texture2D" uid="uid://djl0u0whp1lk5" path="res://imagenesdemenu del juego/murcielago.png" id="16_n6tl0"]
+[ext_resource type="Texture2D" uid="uid://d81luoh62wtc" path="res://my_world_is_ending/YACASI/sprites1/png2-removebg-preview.png" id="16_pn753"]
+[ext_resource type="Texture2D" uid="uid://s2o52sqorufb" path="res://my_world_is_ending/YACASI/sprites1/png3-removebg-preview.png" id="17_4qjfr"]
+[ext_resource type="Texture2D" uid="uid://cf0oqhxxbh05c" path="res://my_world_is_ending/YACASI/sprites1/png4-removebg-preview.png" id="18_r18s2"]
+[ext_resource type="Texture2D" uid="uid://dbrlll4mrg7t8" path="res://imagenesdemenu del juego/plataforma1.png" id="20_gw8uv"]
+[ext_resource type="Texture2D" uid="uid://dpajs7h0smc5m" path="res://my_world_is_ending/YACASI/sprites1/Walk.png" id="29_7uy6e"]
+[ext_resource type="Texture2D" uid="uid://dx7ux4vqoobms" path="res://my_world_is_ending/YACASI/sprites1/Attack_1.png" id="30_hp6li"]
+[ext_resource type="Texture2D" uid="uid://cg7duejkn522e" path="res://my_world_is_ending/YACASI/sprites1/Attack_2.png" id="31_mc2cq"]
+[ext_resource type="Texture2D" uid="uid://m0rrq5vrabsv" path="res://my_world_is_ending/YACASI/sprites1/Attack_3.png" id="32_vt4tg"]
+[ext_resource type="Texture2D" uid="uid://bw6cb2ijou0t1" path="res://my_world_is_ending/YACASI/sprites1/Dead.png" id="33_7h5tt"]
+[ext_resource type="PackedScene" path="res://my_world_is_ending/EScenas/spritesfrasei_2.tscn" id="34_pn753"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r73aq"]
 size = Vector2(545.86707, 179.75357)
@@ -38,17 +50,23 @@ size = Vector2(192.9032, 157.80916)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qap7n"]
 size = Vector2(1259.1681, 12.694894)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uaot8"]
+size = Vector2(161, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpix8"]
+size = Vector2(129.23442, 108.54634)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gw8uv"]
+size = Vector2(174.5, 96)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fhk0l"]
 size = Vector2(216, 266)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1gdvk"]
 load_path = "res://.godot/imported/waraAtaque2.png-f71a3516d4570e35fbdbc8c72ac6d9e1.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jnnib"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uaot8"]
 load_path = "res://.godot/imported/wara1tipodahs.png-a298e2b5d44123f9cc56c4f3318082d8.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gw8uv"]
-load_path = "res://.godot/imported/wara2tipodash.png-498206fc877790e5d0e6110ecbb9d16d.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qap7n"]
 animations = [{
@@ -64,7 +82,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -76,14 +94,11 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_uxgku")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_jnnib")
+"texture": ExtResource("8_gw8uv")
 }],
 "loop": true,
 "name": &"fall",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 3.0,
@@ -123,15 +138,217 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_gw8uv")
+"texture": ExtResource("13_h4byp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_uaot8")
+"texture": SubResource("CompressedTexture2D_uaot8")
 }],
 "loop": true,
 "name": &"wall side",
+"speed": 4.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bqnyf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_4frcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_pn753")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4qjfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_r18s2")
+}],
+"loop": true,
+"name": &"jamps",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0l2q"]
+size = Vector2(107, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dq4o"]
+atlas = ExtResource("29_7uy6e")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvod0"]
+atlas = ExtResource("29_7uy6e")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uiu3j"]
+atlas = ExtResource("29_7uy6e")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwk7j"]
+atlas = ExtResource("29_7uy6e")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpwds"]
+atlas = ExtResource("29_7uy6e")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tptvg"]
+atlas = ExtResource("30_hp6li")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eqhd"]
+atlas = ExtResource("30_hp6li")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uppmv"]
+atlas = ExtResource("30_hp6li")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rudf"]
+atlas = ExtResource("31_mc2cq")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fvnp"]
+atlas = ExtResource("31_mc2cq")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1dow"]
+atlas = ExtResource("31_mc2cq")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k85j2"]
+atlas = ExtResource("31_mc2cq")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3mud"]
+atlas = ExtResource("31_mc2cq")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1agw8"]
+atlas = ExtResource("31_mc2cq")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ty3s8"]
+atlas = ExtResource("32_vt4tg")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak67d"]
+atlas = ExtResource("32_vt4tg")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbd15"]
+atlas = ExtResource("32_vt4tg")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bk2a"]
+atlas = ExtResource("32_vt4tg")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gon8b"]
+atlas = ExtResource("33_7h5tt")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxs6q"]
+atlas = ExtResource("33_7h5tt")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3ftf"]
+atlas = ExtResource("33_7h5tt")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndf4k"]
+atlas = ExtResource("33_7h5tt")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x53ju"]
+atlas = ExtResource("33_7h5tt")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10qex"]
+atlas = ExtResource("33_7h5tt")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vl1xs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dq4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvod0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uiu3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwk7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpwds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tptvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4eqhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uppmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rudf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fvnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1dow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k85j2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3mud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1agw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ty3s8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak67d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbd15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bk2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gon8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxs6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3ftf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndf4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x53ju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10qex")
+}],
+"loop": true,
+"name": &"Enemigo",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qjfr"]
+size = Vector2(54, 207)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
@@ -199,12 +416,153 @@ scale = Vector2(1.0042791, 8.667359)
 skew = -0.09173095
 shape = SubResource("RectangleShape2D_qap7n")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(894, 979)
+shape = SubResource("RectangleShape2D_uaot8")
+metadata/_edit_group_ = true
+
+[node name="Plataforma1" type="Sprite2D" parent="CollisionShape2D3"]
+position = Vector2(1, 44)
+texture = ExtResource("20_gw8uv")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(3421, 1099)
+shape = SubResource("RectangleShape2D_uaot8")
+metadata/_edit_group_ = true
+
+[node name="Plataforma1" type="Sprite2D" parent="CollisionShape2D6"]
+position = Vector2(1, 44)
+texture = ExtResource("20_gw8uv")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(3693, 1007)
+shape = SubResource("RectangleShape2D_uaot8")
+metadata/_edit_group_ = true
+
+[node name="Plataforma1" type="Sprite2D" parent="CollisionShape2D7"]
+position = Vector2(1, 44)
+texture = ExtResource("20_gw8uv")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(3957, 885)
+shape = SubResource("RectangleShape2D_uaot8")
+metadata/_edit_group_ = true
+
+[node name="Plataforma1" type="Sprite2D" parent="CollisionShape2D8"]
+position = Vector2(1, 44)
+texture = ExtResource("20_gw8uv")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2(4242, 192)
+shape = SubResource("RectangleShape2D_uaot8")
+metadata/_edit_group_ = true
+
+[node name="Plataforma1" type="Sprite2D" parent="CollisionShape2D9"]
+position = Vector2(1, 44)
+texture = ExtResource("20_gw8uv")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(1449, 814)
+shape = SubResource("RectangleShape2D_uaot8")
+metadata/_edit_group_ = true
+
+[node name="Plataforma1" type="Sprite2D" parent="CollisionShape2D5"]
+position = Vector2(1, 44)
+texture = ExtResource("20_gw8uv")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(1150, 870.99994)
+rotation = -1.821421
+shape = SubResource("RectangleShape2D_wpix8")
+
+[node name="Plataforma2" type="Sprite2D" parent="CollisionShape2D4"]
+position = Vector2(-19.375122, -4.960205)
+rotation = 2.046712
+texture = ExtResource("2_uaot8")
+
+[node name="Plataforma4" type="Sprite2D" parent="CollisionShape2D4"]
+position = Vector2(-46.58191, 560.9734)
+rotation = 2.046712
+texture = ExtResource("2_uaot8")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="."]
+position = Vector2(1719, 762)
+shape = SubResource("RectangleShape2D_gw8uv")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="."]
+position = Vector2(3569.0002, 400.99988)
+rotation = 0.81892204
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_wpix8")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
+position = Vector2(1150, 870.99994)
+rotation = -1.821421
+shape = SubResource("RectangleShape2D_wpix8")
+
+[node name="Plataforma5" type="Sprite2D" parent="CollisionShape2D10"]
+position = Vector2(-722.24304, 3042.9458)
+rotation = 2.046712
+texture = ExtResource("2_uaot8")
+
+[node name="Plataforma2" type="Sprite2D" parent="CollisionShape2D10"]
+position = Vector2(-171.76671, 2457.1677)
+rotation = 2.046712
+texture = ExtResource("2_uaot8")
+
+[node name="Plataforma4" type="Sprite2D" parent="CollisionShape2D10"]
+position = Vector2(80.73279, 2196.6504)
+rotation = 2.046712
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("2_uaot8")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="."]
+position = Vector2(1150, 870.99994)
+rotation = -1.821421
+shape = SubResource("RectangleShape2D_wpix8")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="CollisionShape2D11"]
+position = Vector2(-687.1663, 3059.1516)
+rotation = -1.821421
+shape = SubResource("RectangleShape2D_wpix8")
+
+[node name="Plataforma4" type="Sprite2D" parent="CollisionShape2D11"]
+position = Vector2(-144.50446, 2826.4666)
+rotation = 2.046712
+texture = ExtResource("2_uaot8")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="CollisionShape2D11/Plataforma4"]
+position = Vector2(-2.8834229, -26.013428)
+rotation = 0.5936314
+shape = SubResource("RectangleShape2D_wpix8")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(2087, -864.99994)
+rotation = -1.821421
+shape = SubResource("RectangleShape2D_wpix8")
+
+[node name="Plataforma2" type="Sprite2D" parent="CollisionShape2D12"]
+position = Vector2(-482.45142, 2412.7268)
+rotation = 2.046712
+texture = ExtResource("2_uaot8")
+
+[node name="Plataforma4" type="Sprite2D" parent="CollisionShape2D12"]
+position = Vector2(148.9922, 2607.4133)
+rotation = 2.046712
+texture = ExtResource("2_uaot8")
+
+[node name="Plataforma3" type="Sprite2D" parent="CollisionShape2D12"]
+position = Vector2(-9.110138, 539.59894)
+rotation = 2.046712
+texture = ExtResource("2_uaot8")
+
 [node name="wara" type="CharacterBody2D" parent="."]
-position = Vector2(1003, 915)
+position = Vector2(1002, 923)
 script = ExtResource("1_5e0wm")
 
 [node name="cuerpo" type="CollisionShape2D" parent="wara"]
-position = Vector2(-567, -13)
+position = Vector2(-542, -23)
 shape = SubResource("RectangleShape2D_fhk0l")
 
 [node name="Camera2D" type="Camera2D" parent="wara"]
@@ -214,11 +572,20 @@ scale = Vector2(14.4497385, 0.3710079)
 script = ExtResource("2_c42g5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="wara"]
-position = Vector2(-573, -36)
-scale = Vector2(0.32778198, 0.16171022)
+position = Vector2(-568, -46.000023)
+scale = Vector2(0.18808971, 0.15937847)
 sprite_frames = SubResource("SpriteFrames_qap7n")
 animation = &"fall"
 speed_scale = 1.3
+
+[node name="pachita dron" type="CharacterBody2D" parent="."]
+position = Vector2(240, 486)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="pachita dron"]
+position = Vector2(285, 160)
+sprite_frames = SubResource("SpriteFrames_bqnyf")
+animation = &"jamps"
+frame_progress = 0.9191776
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("2_d1x01")
@@ -265,26 +632,31 @@ position = Vector2(6174, -363)
 scale = Vector2(2.3062503, 1.4916666)
 texture = ExtResource("1_uh3fc")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="WhatsAppImage20251108At9_55_19Am(1)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(12879.251, 404)
 scale = Vector2(2.4511716, 1.6312503)
 texture = ExtResource("13_8i8up")
+metadata/_edit_lock_ = true
 
 [node name="WhatsAppImage20251108At9_55_19Am(1)2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(15958.125, 405.625)
 scale = Vector2(2.4607422, 1.6299479)
 texture = ExtResource("13_8i8up")
+metadata/_edit_lock_ = true
 
 [node name="WhatsAppImage20251108At9_55_20Am" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(22482, 404)
 scale = Vector2(2.4984376, 1.6520833)
 texture = ExtResource("14_t6cv0")
+metadata/_edit_lock_ = true
 
 [node name="WhatsAppImage20251108At9_55_20Am2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(19233.25, 410)
 scale = Vector2(2.644922, 1.6583334)
 texture = ExtResource("14_t6cv0")
+metadata/_edit_lock_ = true
 
 [node name="Minero1" type="Sprite2D" parent="."]
 position = Vector2(10914, 560.00006)
@@ -323,3 +695,30 @@ position = Vector2(10077, 798.00006)
 scale = Vector2(0.4779412, 0.85891646)
 texture = ExtResource("16_n6tl0")
 metadata/_edit_group_ = true
+
+[node name="demonTaTa" type="CharacterBody2D" parent="."]
+position = Vector2(2126, 706)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="demonTaTa"]
+position = Vector2(661.5, 225)
+shape = SubResource("RectangleShape2D_y0l2q")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="demonTaTa"]
+position = Vector2(639, 170.00002)
+rotation = 0.00069397874
+scale = Vector2(2.624249, 3.4765825)
+sprite_frames = SubResource("SpriteFrames_vl1xs")
+animation = &"Enemigo"
+autoplay = "Enemigo"
+flip_h = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(3311, 627)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(375, 262.5)
+shape = SubResource("RectangleShape2D_4qjfr")
+
+[node name="spritesfrasei2" parent="CharacterBody2D" instance=ExtResource("34_pn753")]
