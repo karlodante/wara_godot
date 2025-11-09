@@ -1,6 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://db7fb186kws82"]
+[gd_scene load_steps=10 format=3 uid="uid://db7fb186kws82"]
 
 [ext_resource type="Texture2D" uid="uid://dtcw6syoan7bi" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 1.png" id="1_7as5a"]
+[ext_resource type="Script" uid="uid://hspstsl7edki" path="res://my_world_is_ending/personaje/wara.gd" id="1_j7o7t"]
+[ext_resource type="Texture2D" uid="uid://cogofuu560e00" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 7.png" id="3_7837i"]
+[ext_resource type="Texture2D" uid="uid://cw7nvqaukrjm0" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 5.png" id="4_o1am7"]
+[ext_resource type="Texture2D" uid="uid://fhjmnqtdoaik" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 6.png" id="5_we26t"]
+[ext_resource type="Script" uid="uid://bn0gwvlc7q5jd" path="res://my_world_is_ending/personaje/animated_sprite_2d.gd" id="6_mk7sv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j7o7t"]
 size = Vector2(763.41113, 1046.411)
@@ -8,11 +13,35 @@ size = Vector2(763.41113, 1046.411)
 [sub_resource type="CircleShape2D" id="CircleShape2D_7837i"]
 radius = 40.012497
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmopd"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("1_7as5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o1am7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_we26t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_we26t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o1am7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
 [node name="Wara" type="CharacterBody2D"]
+script = ExtResource("1_j7o7t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(45.749996, 580.125)
-scale = Vector2(0.059523825, 0.049852073)
+position = Vector2(153.0625, 421.28128)
+scale = Vector2(0.31505105, 0.20743349)
 texture = ExtResource("1_7as5a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -26,3 +55,13 @@ visible = false
 position = Vector2(85.00001, 477)
 scale = Vector2(1.206989, 0.9565575)
 shape = SubResource("CircleShape2D_7837i")
+
+[node name="WaraPose7" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1318, 782)
+texture = ExtResource("3_7837i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cmopd")
+frame_progress = 0.19338153
+script = ExtResource("6_mk7sv")

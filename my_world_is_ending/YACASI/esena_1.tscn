@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://birv00le0h44c"]
+
+[ext_resource type="PackedScene" uid="uid://dmemv08xun6s7" path="res://my_world_is_ending/esenario/esenabeta.tscn" id="1_o8r7v"]
+
+[node name="esena1" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_o8r7v")]
