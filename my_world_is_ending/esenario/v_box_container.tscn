@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct7fjwmpheq7w"]
+
+[ext_resource type="Script" uid="uid://cub6upy40il0q" path="res://my_world_is_ending/esenario/play.gd" id="1_wmgel"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2nv2"]
+bg_color = Color(0.3137255, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgsso"]
+bg_color = Color(0.3082978, 0.026212936, 0.027154611, 1)
+
+[node name="VBoxContainer" type="VBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = 18.0
+offset_right = 158.5
+offset_bottom = 207.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="PLAY" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_d2nv2")
+text = "JUGAR"
+script = ExtResource("1_wmgel")
+
+[node name="SALIR" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_wgsso")
+text = "SALIR"

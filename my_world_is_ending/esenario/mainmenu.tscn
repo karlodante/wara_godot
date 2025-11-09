@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://b805df28tj3ir"]
+
+[ext_resource type="Texture2D" uid="uid://brxn35tku7pcq" path="res://imagenesdemenu del juego/fondo.png" id="1_r4oll"]
+[ext_resource type="Script" uid="uid://bhlf22jl22p7j" path="res://my_world_is_ending/esenario/mainmenu.gd" id="1_rpnhm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2nv2"]
+bg_color = Color(0.3137255, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgsso"]
+bg_color = Color(0.3082978, 0.026212936, 0.027154611, 1)
+
+[node name="mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rpnhm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 8.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.41215244, 0.4121525, 0.41215235, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_right = 4.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Fondo" type="Sprite2D" parent="TextureRect"]
+position = Vector2(963, 546.5)
+scale = Vector2(1.614865, 1.4951591)
+texture = ExtResource("1_r4oll")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = 18.0
+offset_right = 158.5
+offset_bottom = 207.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="PLAY" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_d2nv2")
+text = "JUGAR"
+
+[node name="SALIR" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_wgsso")
+text = "SALIR"
+
+[connection signal="pressed" from="VBoxContainer/PLAY" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/SALIR" to="." method="_on_salir_pressed"]

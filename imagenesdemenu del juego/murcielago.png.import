@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo2acf6xy1pyg"
-path="res://.godot/imported/Sample.png-b5e9e11f52b510e7c569ac4704f57d0d.ctex"
+uid="uid://djl0u0whp1lk5"
+path="res://.godot/imported/murcielago.png-e582ebe98d88d31f7a9f3644a18ddaaa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://my_world_is_ending/Sample.png"
-dest_files=["res://.godot/imported/Sample.png-b5e9e11f52b510e7c569ac4704f57d0d.ctex"]
+source_file="res://imagenesdemenu del juego/murcielago.png"
+dest_files=["res://.godot/imported/murcielago.png-e582ebe98d88d31f7a9f3644a18ddaaa.ctex"]
 
 [params]
 
