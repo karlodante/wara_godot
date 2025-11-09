@@ -1,25 +1,39 @@
-[gd_scene load_steps=19 format=3 uid="uid://dmemv08xun6s7"]
+[gd_scene load_steps=34 format=3 uid="uid://dmemv08xun6s7"]
 
 [ext_resource type="Script" uid="uid://dclfw4fqgxwl1" path="res://my_world_is_ending/esenario/character_body_2d.gd" id="1_5e0wm"]
 [ext_resource type="Texture2D" uid="uid://cugejgf2fkhc0" path="res://my_world_is_ending/esenario/WhatsApp Image 2025-11-08 at 9.55.18 AM.jpeg" id="1_uh3fc"]
 [ext_resource type="Texture2D" uid="uid://bvqyatl333fbc" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 4.png" id="2_a4ynv"]
 [ext_resource type="Script" uid="uid://5nh3tgvxm3ss" path="res://my_world_is_ending/esenario/camera_2d.gd" id="2_c42g5"]
 [ext_resource type="Script" uid="uid://bdeowtamdr620" path="res://my_world_is_ending/esenario/parallax_background.gd" id="2_d1x01"]
+[ext_resource type="Texture2D" uid="uid://2cf8rtxvgdra" path="res://imagenesdemenu del juego/waraAtaque3.png" id="2_gw8uv"]
 [ext_resource type="Texture2D" uid="uid://cogofuu560e00" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 7.png" id="2_qap7n"]
+[ext_resource type="Texture2D" uid="uid://c72rnvemfx7dv" path="res://imagenesdemenu del juego/waraAtaque2.png" id="3_uaot8"]
 [ext_resource type="Texture2D" uid="uid://dtcw6syoan7bi" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 1.png" id="4_5e0wm"]
 [ext_resource type="Texture2D" uid="uid://dl3moh6h2gpnx" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 3.png" id="4_qap7n"]
+[ext_resource type="Texture2D" uid="uid://burukgf4biav" path="res://imagenesdemenu del juego/waraAtaque1.png" id="4_wpix8"]
 [ext_resource type="Texture2D" uid="uid://cw7nvqaukrjm0" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 5.png" id="6_fhk0l"]
+[ext_resource type="Texture2D" uid="uid://c1hgft3rafgqt" path="res://imagenesdemenu del juego/wara1.png" id="6_uxgku"]
 [ext_resource type="Texture2D" uid="uid://fhjmnqtdoaik" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 6.png" id="7_5bxl3"]
+[ext_resource type="Texture2D" uid="uid://dk7x31xdxd4q8" path="res://imagenesdemenu del juego/wara2 cauida.png" id="7_jrt68"]
 [ext_resource type="Texture2D" uid="uid://cr2w3aqcj6f71" path="res://my_world_is_ending/esenario/WhatsApp Image 2025-11-08 at 9.55.19 AM.jpeg" id="11_qap7n"]
+[ext_resource type="Texture2D" uid="uid://xhugthqqtky8" path="res://imagenesdemenu del juego/negro-5686e4bf3df78ccc15019c28.jpg" id="12_x0gaw"]
+[ext_resource type="Texture2D" uid="uid://bdydcn2cdikod" path="res://imagenesdemenu del juego/WhatsApp Image 2025-11-08 at 9.55.19 AM (1).jpeg" id="13_8i8up"]
+[ext_resource type="Texture2D" uid="uid://cuylhiqgpm06x" path="res://imagenesdemenu del juego/wara2tipodash.png" id="13_h4byp"]
+[ext_resource type="Texture2D" uid="uid://pq7kfj4wgqtc" path="res://imagenesdemenu del juego/minero1.jpeg" id="13_n6tl0"]
+[ext_resource type="Texture2D" uid="uid://cp7ksf1yirks" path="res://imagenesdemenu del juego/grafico 3.png" id="14_8saor"]
+[ext_resource type="Texture2D" uid="uid://bww60r5u1fisg" path="res://imagenesdemenu del juego/WhatsApp Image 2025-11-08 at 9.55.20 AM.jpeg" id="14_t6cv0"]
+[ext_resource type="Texture2D" uid="uid://nq3eve4qombx" path="res://imagenesdemenu del juego/Grafico 2.png" id="15_8i8up"]
+[ext_resource type="Texture2D" uid="uid://b0l8p1m0c3qmr" path="res://imagenesdemenu del juego/wara1tipodahs.png" id="15_uaot8"]
+[ext_resource type="Texture2D" uid="uid://djl0u0whp1lk5" path="res://imagenesdemenu del juego/murcielago.png" id="16_n6tl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r73aq"]
-size = Vector2(437.56284, 150.7752)
+size = Vector2(545.86707, 179.75357)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47u5h"]
-size = Vector2(198.13423, 176.82922)
+size = Vector2(2192.8145, 176.82922)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fhud"]
-size = Vector2(546.03613, 122.09131)
+size = Vector2(834.5744, 139.74866)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ty5cb"]
 size = Vector2(192.9032, 157.80916)
@@ -75,61 +89,101 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fhk0l"]
-size = Vector2(230, 285)
+size = Vector2(216, 266)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wpix8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gw8uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uaot8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wpix8")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_uxgku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jrt68")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_h4byp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uaot8")
+}],
+"loop": true,
+"name": &"wall side",
+"speed": 5.0
+}]
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
 [node name="piso" type="CollisionShape2D" parent="."]
-position = Vector2(2002, 1198.25)
-rotation = 0.009562738
+position = Vector2(2471.4998, 1188.25)
+rotation = 0.00956274
 scale = Vector2(8.667857, 1)
 shape = SubResource("RectangleShape2D_r73aq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5900.4946, 1277.1991)
-rotation = -0.009951085
-scale = Vector2(8.667857, 1)
+position = Vector2(14671.76, 1270.5867)
+rotation = 0.009179713
+scale = Vector2(8.667858, 0.9999999)
 shape = SubResource("RectangleShape2D_47u5h")
 
 [node name="grada1" type="CollisionShape2D" parent="."]
-position = Vector2(3833, 1247)
+position = Vector2(4520, 1216.5907)
 shape = SubResource("RectangleShape2D_0fhud")
 metadata/_edit_group_ = true
 
 [node name="grada2" type="CollisionShape2D" parent="."]
-position = Vector2(4173, 1190)
+position = Vector2(5113, 1160.5907)
 shape = SubResource("RectangleShape2D_0fhud")
 metadata/_edit_group_ = true
 
 [node name="grada3" type="CollisionShape2D" parent="."]
-position = Vector2(4573, 1091.0002)
+position = Vector2(5432, 1074.5907)
 rotation = -0.09805797
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_0fhud")
 metadata/_edit_group_ = true
 
 [node name="grada4" type="CollisionShape2D" parent="."]
-position = Vector2(4868, 1011)
-rotation = -0.05327937
+position = Vector2(5714.9736, 995.5933)
+rotation = -0.053279366
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_0fhud")
 metadata/_edit_group_ = true
 
 [node name="grada5" type="CollisionShape2D" parent="."]
-position = Vector2(5014, 961)
+position = Vector2(5958.9995, 940.59064)
 rotation = -0.0038845772
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_0fhud")
 metadata/_edit_group_ = true
 
 [node name="grada6" type="CollisionShape2D" parent="."]
-position = Vector2(5221.0005, 917.99994)
-rotation = 0.006015897
-scale = Vector2(0.9999998, 0.9999998)
+position = Vector2(6300.0605, 903)
+rotation = 0.0060158973
+scale = Vector2(0.99999964, 0.99999964)
 shape = SubResource("RectangleShape2D_0fhud")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(6379.0005, 512)
+position = Vector2(2515, 2094)
 rotation = 0.073990464
 scale = Vector2(1.0042791, 8.667359)
 skew = -0.09173095
@@ -143,20 +197,18 @@ skew = -0.09173095
 shape = SubResource("RectangleShape2D_qap7n")
 
 [node name="wara" type="CharacterBody2D" parent="."]
-position = Vector2(953, 1023)
+position = Vector2(1003, 915)
 script = ExtResource("1_5e0wm")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="wara"]
-position = Vector2(-580.25244, -46.576187)
-scale = Vector2(0.20009351, 0.1645794)
+position = Vector2(-585, -15.0000305)
+scale = Vector2(0.19616446, 0.16493993)
 sprite_frames = SubResource("SpriteFrames_qap7n")
-animation = &"jump"
-frame_progress = 0.6787736
+animation = &"dash"
 speed_scale = 1.3
 
 [node name="cuerpo" type="CollisionShape2D" parent="wara"]
-position = Vector2(-580, -41.5)
+position = Vector2(-565, -7)
 shape = SubResource("RectangleShape2D_fhk0l")
 
 [node name="Camera2D" type="Camera2D" parent="wara"]
@@ -165,6 +217,12 @@ rotation = 3.1415925
 scale = Vector2(14.4497385, 0.3710079)
 script = ExtResource("2_c42g5")
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="wara"]
+position = Vector2(-112.00006, -72.999985)
+scale = Vector2(1.3756385, 1.0626317)
+sprite_frames = SubResource("SpriteFrames_wpix8")
+animation = &"fall"
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("2_d1x01")
 
@@ -172,41 +230,99 @@ script = ExtResource("2_d1x01")
 position = Vector2(-17, 133)
 
 [node name="WhatsAppImage20251108At9_55_18Am" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1379, -222)
-scale = Vector2(1.0023438, 1.3479166)
+position = Vector2(1379, -208)
+scale = Vector2(1.2570313, 1.3333333)
 texture = ExtResource("1_uh3fc")
 centered = false
 metadata/_edit_lock_ = true
 
 [node name="WhatsAppImage20251108At9_55_18Am2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(110, -230)
-scale = Vector2(1.0023438, 1.3479166)
+position = Vector2(110, -211)
+scale = Vector2(1.0023438, 1.3281251)
 texture = ExtResource("1_uh3fc")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="WhatsAppImage20251108At9_55_19Am" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(7105, 210.00006)
-rotation = -3.1430247
-scale = Vector2(1.2046875, 1.8489584)
-texture = ExtResource("11_qap7n")
-metadata/_edit_lock_ = true
-
 [node name="WhatsAppImage20251108At9_55_19Am3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(3280.9998, 403.99997)
-scale = Vector2(1.0140626, 1.35625)
+position = Vector2(3811.75, 434.49994)
+scale = Vector2(1.2855468, 1.3364583)
 texture = ExtResource("11_qap7n")
 metadata/_edit_lock_ = true
 
 [node name="WhatsAppImage20251108At9_55_19Am2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(4530.319, 365.6985)
+position = Vector2(5414, 371.99997)
 rotation = -1.566068
-scale = Vector2(1.1192224, 1.35625)
+scale = Vector2(1.1192224, 1.6100864)
 texture = ExtResource("11_qap7n")
 metadata/_edit_lock_ = true
 
+[node name="Negro5686e4Bf3Df78Ccc15019c28" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(10208.001, 345)
+scale = Vector2(1.1468747, 1.2683333)
+texture = ExtResource("12_x0gaw")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
 [node name="WhatsAppImage20251108At9_55_18Am3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(5062.0005, -317)
-scale = Vector2(1.0023438, 1.4916666)
+position = Vector2(6174, -363)
+scale = Vector2(2.3062503, 1.4916666)
 texture = ExtResource("1_uh3fc")
 centered = false
+
+[node name="WhatsAppImage20251108At9_55_19Am(1)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(12879.251, 404)
+scale = Vector2(2.4511716, 1.6312503)
+texture = ExtResource("13_8i8up")
+
+[node name="WhatsAppImage20251108At9_55_19Am(1)2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(15958.125, 405.625)
+scale = Vector2(2.4607422, 1.6299479)
+texture = ExtResource("13_8i8up")
+
+[node name="WhatsAppImage20251108At9_55_20Am" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(22482, 404)
+scale = Vector2(2.4984376, 1.6520833)
+texture = ExtResource("14_t6cv0")
+
+[node name="WhatsAppImage20251108At9_55_20Am2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(19233.25, 410)
+scale = Vector2(2.644922, 1.6583334)
+texture = ExtResource("14_t6cv0")
+
+[node name="Minero1" type="Sprite2D" parent="."]
+position = Vector2(10914, 560.00006)
+scale = Vector2(0.5588072, 0.628125)
+texture = ExtResource("13_n6tl0")
+
+[node name="Grafico3" type="Sprite2D" parent="."]
+position = Vector2(10498, 277.00003)
+scale = Vector2(0.5125786, 0.56036747)
+texture = ExtResource("14_8saor")
+metadata/_edit_group_ = true
+
+[node name="Grafico2" type="Sprite2D" parent="."]
+position = Vector2(9644, 172)
+scale = Vector2(0.31463763, 0.34993133)
+texture = ExtResource("15_8i8up")
+metadata/_edit_group_ = true
+
+[node name="Minero4" type="Sprite2D" parent="."]
+position = Vector2(10890, 647)
+scale = Vector2(0.63641244, 0.43359375)
+texture = ExtResource("13_n6tl0")
+
+[node name="Minero3" type="Sprite2D" parent="."]
+position = Vector2(10608, 815)
+scale = Vector2(0.4473684, 0.33125)
+texture = ExtResource("13_n6tl0")
+
+[node name="Minero2" type="Sprite2D" parent="."]
+position = Vector2(10861, 909.99994)
+scale = Vector2(0.44414607, 0.40703124)
+texture = ExtResource("13_n6tl0")
+
+[node name="Murcielago" type="Sprite2D" parent="."]
+position = Vector2(10077, 798.00006)
+scale = Vector2(0.4779412, 0.85891646)
+texture = ExtResource("16_n6tl0")
+metadata/_edit_group_ = true
