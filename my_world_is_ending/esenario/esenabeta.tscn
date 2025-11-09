@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dmemv08xun6s7"]
+[gd_scene load_steps=33 format=3 uid="uid://dmemv08xun6s7"]
 
 [ext_resource type="Script" uid="uid://dclfw4fqgxwl1" path="res://my_world_is_ending/esenario/character_body_2d.gd" id="1_5e0wm"]
 [ext_resource type="Texture2D" uid="uid://cugejgf2fkhc0" path="res://my_world_is_ending/esenario/WhatsApp Image 2025-11-08 at 9.55.18 AM.jpeg" id="1_uh3fc"]
@@ -7,23 +7,20 @@
 [ext_resource type="Script" uid="uid://bdeowtamdr620" path="res://my_world_is_ending/esenario/parallax_background.gd" id="2_d1x01"]
 [ext_resource type="Texture2D" uid="uid://2cf8rtxvgdra" path="res://imagenesdemenu del juego/waraAtaque3.png" id="2_gw8uv"]
 [ext_resource type="Texture2D" uid="uid://cogofuu560e00" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 7.png" id="2_qap7n"]
-[ext_resource type="Texture2D" uid="uid://c72rnvemfx7dv" path="res://imagenesdemenu del juego/waraAtaque2.png" id="3_uaot8"]
 [ext_resource type="Texture2D" uid="uid://dtcw6syoan7bi" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 1.png" id="4_5e0wm"]
 [ext_resource type="Texture2D" uid="uid://dl3moh6h2gpnx" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 3.png" id="4_qap7n"]
-[ext_resource type="Texture2D" uid="uid://burukgf4biav" path="res://imagenesdemenu del juego/waraAtaque1.png" id="4_wpix8"]
+[ext_resource type="Texture2D" uid="uid://cn01epggdk65r" path="res://imagenesdemenu del juego/waraAtaque1.png" id="4_wpix8"]
 [ext_resource type="Texture2D" uid="uid://cw7nvqaukrjm0" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 5.png" id="6_fhk0l"]
-[ext_resource type="Texture2D" uid="uid://c1hgft3rafgqt" path="res://imagenesdemenu del juego/wara1.png" id="6_uxgku"]
+[ext_resource type="Texture2D" uid="uid://c7phxk3s0yxp4" path="res://imagenesdemenu del juego/wara1.png" id="6_uxgku"]
 [ext_resource type="Texture2D" uid="uid://fhjmnqtdoaik" path="res://my_world_is_ending/personaje/Nueva carpeta (3)/Wara Pose 6.png" id="7_5bxl3"]
-[ext_resource type="Texture2D" uid="uid://dk7x31xdxd4q8" path="res://imagenesdemenu del juego/wara2 cauida.png" id="7_jrt68"]
 [ext_resource type="Texture2D" uid="uid://cr2w3aqcj6f71" path="res://my_world_is_ending/esenario/WhatsApp Image 2025-11-08 at 9.55.19 AM.jpeg" id="11_qap7n"]
 [ext_resource type="Texture2D" uid="uid://xhugthqqtky8" path="res://imagenesdemenu del juego/negro-5686e4bf3df78ccc15019c28.jpg" id="12_x0gaw"]
 [ext_resource type="Texture2D" uid="uid://bdydcn2cdikod" path="res://imagenesdemenu del juego/WhatsApp Image 2025-11-08 at 9.55.19 AM (1).jpeg" id="13_8i8up"]
-[ext_resource type="Texture2D" uid="uid://cuylhiqgpm06x" path="res://imagenesdemenu del juego/wara2tipodash.png" id="13_h4byp"]
 [ext_resource type="Texture2D" uid="uid://pq7kfj4wgqtc" path="res://imagenesdemenu del juego/minero1.jpeg" id="13_n6tl0"]
 [ext_resource type="Texture2D" uid="uid://cp7ksf1yirks" path="res://imagenesdemenu del juego/grafico 3.png" id="14_8saor"]
 [ext_resource type="Texture2D" uid="uid://bww60r5u1fisg" path="res://imagenesdemenu del juego/WhatsApp Image 2025-11-08 at 9.55.20 AM.jpeg" id="14_t6cv0"]
 [ext_resource type="Texture2D" uid="uid://nq3eve4qombx" path="res://imagenesdemenu del juego/Grafico 2.png" id="15_8i8up"]
-[ext_resource type="Texture2D" uid="uid://b0l8p1m0c3qmr" path="res://imagenesdemenu del juego/wara1tipodahs.png" id="15_uaot8"]
+[ext_resource type="Texture2D" uid="uid://oechkonodc13" path="res://imagenesdemenu del juego/wara1tipodahs.png" id="15_uaot8"]
 [ext_resource type="Texture2D" uid="uid://djl0u0whp1lk5" path="res://imagenesdemenu del juego/murcielago.png" id="16_n6tl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r73aq"]
@@ -41,8 +38,34 @@ size = Vector2(192.9032, 157.80916)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qap7n"]
 size = Vector2(1259.1681, 12.694894)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhk0l"]
+size = Vector2(216, 266)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1gdvk"]
+load_path = "res://.godot/imported/waraAtaque2.png-f71a3516d4570e35fbdbc8c72ac6d9e1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jnnib"]
+load_path = "res://.godot/imported/wara1tipodahs.png-a298e2b5d44123f9cc56c4f3318082d8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gw8uv"]
+load_path = "res://.godot/imported/wara2tipodash.png-498206fc877790e5d0e6110ecbb9d16d.ctex"
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_qap7n"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gw8uv")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_1gdvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wpix8")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_qap7n")
@@ -50,6 +73,17 @@ animations = [{
 "loop": true,
 "name": &"dash",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_uxgku")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_jnnib")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 3.0,
@@ -86,41 +120,10 @@ animations = [{
 "loop": true,
 "name": &"walk",
 "speed": 7.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhk0l"]
-size = Vector2(216, 266)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_wpix8"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_gw8uv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_uaot8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_wpix8")
-}],
-"loop": true,
-"name": &"attack",
-"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_uxgku")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_jrt68")
-}],
-"loop": true,
-"name": &"fall",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_h4byp")
+"texture": SubResource("CompressedTexture2D_gw8uv")
 }, {
 "duration": 1.0,
 "texture": ExtResource("15_uaot8")
@@ -200,15 +203,8 @@ shape = SubResource("RectangleShape2D_qap7n")
 position = Vector2(1003, 915)
 script = ExtResource("1_5e0wm")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="wara"]
-position = Vector2(-585, -15.0000305)
-scale = Vector2(0.19616446, 0.16493993)
-sprite_frames = SubResource("SpriteFrames_qap7n")
-animation = &"dash"
-speed_scale = 1.3
-
 [node name="cuerpo" type="CollisionShape2D" parent="wara"]
-position = Vector2(-565, -7)
+position = Vector2(-567, -13)
 shape = SubResource("RectangleShape2D_fhk0l")
 
 [node name="Camera2D" type="Camera2D" parent="wara"]
@@ -217,11 +213,12 @@ rotation = 3.1415925
 scale = Vector2(14.4497385, 0.3710079)
 script = ExtResource("2_c42g5")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="wara"]
-position = Vector2(-112.00006, -72.999985)
-scale = Vector2(1.3756385, 1.0626317)
-sprite_frames = SubResource("SpriteFrames_wpix8")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="wara"]
+position = Vector2(-573, -36)
+scale = Vector2(0.32778198, 0.16171022)
+sprite_frames = SubResource("SpriteFrames_qap7n")
 animation = &"fall"
+speed_scale = 1.3
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("2_d1x01")

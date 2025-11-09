@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn01epggdk65r"
-path="res://.godot/imported/waraAtaque1.png-400716f328ea79af4b9614a08173dead.ctex"
+uid="uid://bayh1x4dqc75p"
+path="res://.godot/imported/wara1.png-f0a916493c40085a16850cf5308d327c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenesdemenu del juego/waraAtaque1.png"
-dest_files=["res://.godot/imported/waraAtaque1.png-400716f328ea79af4b9614a08173dead.ctex"]
+source_file="res://my_world_is_ending/enemigos/wara1.png"
+dest_files=["res://.godot/imported/wara1.png-f0a916493c40085a16850cf5308d327c.ctex"]
 
 [params]
 
