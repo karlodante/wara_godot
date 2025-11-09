@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dmemv08xun6s7"]
+[gd_scene load_steps=19 format=3 uid="uid://dmemv08xun6s7"]
 
 [ext_resource type="Script" uid="uid://dclfw4fqgxwl1" path="res://my_world_is_ending/esenario/character_body_2d.gd" id="1_5e0wm"]
 [ext_resource type="Texture2D" uid="uid://cugejgf2fkhc0" path="res://my_world_is_ending/esenario/WhatsApp Image 2025-11-08 at 9.55.18 AM.jpeg" id="1_uh3fc"]
@@ -13,10 +13,19 @@
 [ext_resource type="Texture2D" uid="uid://cr2w3aqcj6f71" path="res://my_world_is_ending/esenario/WhatsApp Image 2025-11-08 at 9.55.19 AM.jpeg" id="11_qap7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r73aq"]
-size = Vector2(592.5773, 45)
+size = Vector2(437.56284, 150.7752)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhk0l"]
-size = Vector2(234, 320.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47u5h"]
+size = Vector2(198.13423, 176.82922)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fhud"]
+size = Vector2(546.03613, 122.09131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ty5cb"]
+size = Vector2(192.9032, 157.80916)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qap7n"]
+size = Vector2(1259.1681, 12.694894)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qap7n"]
 animations = [{
@@ -45,7 +54,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 3.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -65,30 +74,93 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhk0l"]
+size = Vector2(230, 285)
+
 [node name="StaticBody2D" type="StaticBody2D"]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(2573.8125, 1215)
+[node name="piso" type="CollisionShape2D" parent="."]
+position = Vector2(2002, 1198.25)
+rotation = 0.009562738
 scale = Vector2(8.667857, 1)
 shape = SubResource("RectangleShape2D_r73aq")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(789, 1071)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5900.4946, 1277.1991)
+rotation = -0.009951085
+scale = Vector2(8.667857, 1)
+shape = SubResource("RectangleShape2D_47u5h")
+
+[node name="grada1" type="CollisionShape2D" parent="."]
+position = Vector2(3833, 1247)
+shape = SubResource("RectangleShape2D_0fhud")
+metadata/_edit_group_ = true
+
+[node name="grada2" type="CollisionShape2D" parent="."]
+position = Vector2(4173, 1190)
+shape = SubResource("RectangleShape2D_0fhud")
+metadata/_edit_group_ = true
+
+[node name="grada3" type="CollisionShape2D" parent="."]
+position = Vector2(4573, 1091.0002)
+rotation = -0.09805797
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_0fhud")
+metadata/_edit_group_ = true
+
+[node name="grada4" type="CollisionShape2D" parent="."]
+position = Vector2(4868, 1011)
+rotation = -0.05327937
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_0fhud")
+metadata/_edit_group_ = true
+
+[node name="grada5" type="CollisionShape2D" parent="."]
+position = Vector2(5014, 961)
+rotation = -0.0038845772
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_0fhud")
+metadata/_edit_group_ = true
+
+[node name="grada6" type="CollisionShape2D" parent="."]
+position = Vector2(5221.0005, 917.99994)
+rotation = 0.006015897
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_0fhud")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(6379.0005, 512)
+rotation = 0.073990464
+scale = Vector2(1.0042791, 8.667359)
+skew = -0.09173095
+shape = SubResource("RectangleShape2D_ty5cb")
+
+[node name="limite_pared" type="CollisionShape2D" parent="."]
+position = Vector2(210.80219, 594.12305)
+rotation = 1.5252386
+scale = Vector2(1.0042791, 8.667359)
+skew = -0.09173095
+shape = SubResource("RectangleShape2D_qap7n")
+
+[node name="wara" type="CharacterBody2D" parent="."]
+position = Vector2(953, 1023)
 script = ExtResource("1_5e0wm")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-573, -54)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="wara"]
+position = Vector2(-580.25244, -46.576187)
+scale = Vector2(0.20009351, 0.1645794)
+sprite_frames = SubResource("SpriteFrames_qap7n")
+animation = &"jump"
+frame_progress = 0.6787736
+speed_scale = 1.3
+
+[node name="cuerpo" type="CollisionShape2D" parent="wara"]
+position = Vector2(-580, -41.5)
 shape = SubResource("RectangleShape2D_fhk0l")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(-516, -68)
-scale = Vector2(0.31462553, 0.19023666)
-sprite_frames = SubResource("SpriteFrames_qap7n")
-animation = &"dash"
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(166, -369)
+[node name="Camera2D" type="Camera2D" parent="wara"]
+position = Vector2(238, -379)
 rotation = 3.1415925
 scale = Vector2(14.4497385, 0.3710079)
 script = ExtResource("2_c42g5")
@@ -98,16 +170,43 @@ script = ExtResource("2_d1x01")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(-17, 133)
-motion_mirroring = Vector2(1280, 5.5)
 
 [node name="WhatsAppImage20251108At9_55_18Am" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(19, -136)
+position = Vector2(1379, -222)
+scale = Vector2(1.0023438, 1.3479166)
+texture = ExtResource("1_uh3fc")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="WhatsAppImage20251108At9_55_18Am2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(110, -230)
 scale = Vector2(1.0023438, 1.3479166)
 texture = ExtResource("1_uh3fc")
 centered = false
 metadata/_edit_lock_ = true
 
 [node name="WhatsAppImage20251108At9_55_19Am" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(3230, 514)
+position = Vector2(7105, 210.00006)
+rotation = -3.1430247
+scale = Vector2(1.2046875, 1.8489584)
+texture = ExtResource("11_qap7n")
+metadata/_edit_lock_ = true
+
+[node name="WhatsAppImage20251108At9_55_19Am3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(3280.9998, 403.99997)
 scale = Vector2(1.0140626, 1.35625)
 texture = ExtResource("11_qap7n")
+metadata/_edit_lock_ = true
+
+[node name="WhatsAppImage20251108At9_55_19Am2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(4530.319, 365.6985)
+rotation = -1.566068
+scale = Vector2(1.1192224, 1.35625)
+texture = ExtResource("11_qap7n")
+metadata/_edit_lock_ = true
+
+[node name="WhatsAppImage20251108At9_55_18Am3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(5062.0005, -317)
+scale = Vector2(1.0023438, 1.4916666)
+texture = ExtResource("1_uh3fc")
+centered = false

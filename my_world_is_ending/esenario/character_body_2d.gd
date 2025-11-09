@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 @export var speed: float = 300
-@export var jump_force: float = 400
+@export var jump_force: float = 500
 @export var dash_speed: float = 800
-@export var dash_duration: float = 0.15
+@export var dash_duration: float = 0.17
 @export var gravity: float = 980
 
 var is_dashing: bool = false
