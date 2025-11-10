@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var speed: float = 300.0
 @export var acceleration: float = 25.0
 @export var friction: float = 20.0
+
 # --------------------------------------
 #  SALTO MEJORADO
 # --------------------------------------
@@ -16,6 +17,7 @@ extends CharacterBody2D
 var coyote_timer: float = 0.0
 var jump_buffer_timer: float = 0.0
 var is_jump_cut: bool = false
+
 # --------------------------------------
 #  DASH MEJORADO
 # --------------------------------------
@@ -27,6 +29,7 @@ var dash_timer: float = 0.0
 var dash_cooldown_timer: float = 0.0
 var dash_direction: float = 1.0
 var can_dash: bool = true
+
 # --------------------------------------
 #  WALL JUMP / WALL SLIDE
 # --------------------------------------
@@ -34,6 +37,7 @@ var can_dash: bool = true
 @export var wall_jump_force: Vector2 = Vector2(400, -400)
 var is_wall_sliding: bool = false
 var wall_direction: int = 0
+
 # --------------------------------------
 #  COMBATE
 # --------------------------------------
@@ -43,26 +47,48 @@ var is_attacking: bool = false
 var attack_cooldown_timer: float = 0.0
 var combo_count: int = 0
 var last_attack_time: float = 0.0
+
+# --------------------------------------
+#  SISTEMA DE VIDA Y DAÑO
+# --------------------------------------
+@export var vida_maxima: int = 100
+@export var vida_actual: int = 100
+@export var invulnerabilidad_tiempo: float = 1.0
+var esta_invulnerable: bool = false
+var tiempo_invulnerable: float = 0.0
+
+# --------------------------------------
+#  ATAQUE MEJORADO
+# --------------------------------------
+@export var damage_ataque: int = 20
+@export var rango_ataque: float = 60.0
+@export var knockback_fuerza: float = 400.0
+
 # --------------------------------------
 #  EFECTOS
 # --------------------------------------
 @export var screen_shake_intensity: float = 5.0
 var is_invulnerable: bool = false
+
 # --------------------------------------
 #  FÍSICA
 # --------------------------------------
 @export var gravity: float = 1200.0
+
 # --------------------------------------
 #  REFERENCIAS
 # --------------------------------------
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var camera: Camera2D = $Camera2D
 
-
 func _ready() -> void:
 	animated_sprite.play("idle")
 	setup_input_actions()
-
+	
+	# AGREGAR AL GRUPO PLAYER (importante para que los enemigos te detecten)
+	add_to_group("player")
+	
+	print("✅ Sistema de combate activado - Vida: ", vida_actual, "/", vida_maxima)
 
 func setup_input_actions() -> void:
 	if not InputMap.has_action("dash"):
@@ -78,7 +104,6 @@ func setup_input_actions() -> void:
 		InputMap.add_action("attack")
 		InputMap.action_add_event("attack", attack_event)
 		print("✅ Acción 'attack' creada")
-
 
 # ------------------------------------------------------------------
 #  BUCLE PRINCIPAL
@@ -105,7 +130,13 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	handle_animations(direction)
-
+	
+	# Actualizar invulnerabilidad
+	if esta_invulnerable:
+		tiempo_invulnerable -= delta
+		if tiempo_invulnerable <= 0:
+			esta_invulnerable = false
+			animated_sprite.modulate = Color.WHITE
 
 # ------------------------------------------------------------------
 #  TIMERS
@@ -115,7 +146,6 @@ func update_timers(delta: float) -> void:
 	jump_buffer_timer -= delta
 	dash_cooldown_timer -= delta
 	attack_cooldown_timer -= delta
-
 
 # ------------------------------------------------------------------
 #  DASH
@@ -130,7 +160,6 @@ func handle_dash(delta: float, direction: float, dash_pressed: bool) -> void:
 
 	if dash_pressed and dash_cooldown_timer <= 0.0 and direction != 0.0:
 		start_dash(direction)
-
 
 func start_dash(direction: float) -> void:
 	is_dashing = true
@@ -151,7 +180,6 @@ func start_dash(direction: float) -> void:
 	is_invulnerable = true
 	await get_tree().create_timer(dash_duration).timeout
 	is_invulnerable = false
-
 
 # ------------------------------------------------------------------
 #  WALL
@@ -177,7 +205,6 @@ func handle_wall_mechanics(_direction: float, jump_pressed: bool) -> void:
 			velocity.y = wall_jump_force.y
 			is_wall_sliding = false
 
-
 # ------------------------------------------------------------------
 #  GRAVEDAD
 # ------------------------------------------------------------------
@@ -186,7 +213,6 @@ func handle_gravity(delta: float) -> void:
 		velocity.y += gravity * delta
 	elif is_wall_sliding:
 		velocity.y += gravity * delta * 0.3
-
 
 # ------------------------------------------------------------------
 #  MOVIMIENTO HORIZONTAL
@@ -197,7 +223,6 @@ func handle_horizontal_movement(_direction: float, _delta: float) -> void:
 		velocity.x = move_toward(velocity.x, dir * speed, acceleration)
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, friction)
-
 
 # ------------------------------------------------------------------
 #  SALTO
@@ -213,13 +238,15 @@ func handle_jump(jump_pressed: bool, _jump_released: bool) -> void:
 		animated_sprite.play("jump")
 		if camera and camera.has_method("screen_shake"):
 			camera.screen_shake(screen_shake_intensity * 0.5, 0.1)
+			
+func _on_area_cuerpo_body_entered(body):
+	if body.has_method("recibir_danio") and body.is_in_group("enemigos"):
+		# Recibir daño por contacto
+		var direccion = (global_position - body.global_position).normalized()
+		recibir_danio(5, direccion)
 
-
 # ------------------------------------------------------------------
-#  ATAQUE
-# ------------------------------------------------------------------
-# ------------------------------------------------------------------
-#  ATAQUE - SISTEMA CORREGIDO (GODOT 4)
+#  ATAQUE MEJORADO CON DETECCIÓN POR RAYOS (SIN AREA2D)
 # ------------------------------------------------------------------
 func handle_attack(attack_pressed: bool) -> void:
 	if attack_pressed and attack_cooldown_timer <= 0.0 and not is_attacking and is_on_floor():
@@ -244,99 +271,166 @@ func start_attack() -> void:
 	# ELEGIR Y REPRODUCIR ANIMACIÓN DE ATAQUE
 	var attack_animation = get_attack_animation_name()
 	animated_sprite.play(attack_animation)
-	print("🔫 Iniciando ataque: ", attack_animation)
+	print("⚔️ Ataque combo ", combo_count + 1)
+	
+	# DETECTAR Y DAÑAR ENEMIGOS CERCA
+	detectar_y_danar_enemigos()
 	
 	# EMPUJE DURANTE ATAQUE
-	velocity.x += 100.0 * dash_direction
+	velocity.x += 80.0 * dash_direction
 	
 	# SCREEN SHAKE
 	if camera and camera.has_method("screen_shake"):
-		camera.screen_shake(screen_shake_intensity * 0.3, 0.15)
+		camera.screen_shake(screen_shake_intensity * 0.5, 0.2)
 	
-	# ESPERAR A QUE TERMINE EL ATAQUE (TIEMPO FIJO)
-	var attack_duration = get_attack_duration(attack_animation)
-	await get_tree().create_timer(attack_duration).timeout
-	
-	# FINALIZAR ATAQUE
+	# ESPERAR Y TERMINAR ATAQUE
+	await get_tree().create_timer(0.4).timeout
 	is_attacking = false
-	print("✅ Ataque terminado")
+
+func detectar_y_danar_enemigos():
+	var space_state = get_world_2d().direct_space_state
+	
+	# Dirección del ataque según donde mira el personaje
+	var direccion_ataque = Vector2.RIGHT if not animated_sprite.flip_h else Vector2.LEFT
+	
+	# Crear query para detectar enemigos en el rango de ataque
+	var from = global_position
+	var to = global_position + (direccion_ataque * rango_ataque)
+	
+	var query = PhysicsRayQueryParameters2D.create(from, to)
+	query.exclude = [self]  # Excluir al jugador mismo
+	
+	var result = space_state.intersect_ray(query)
+	
+	if result:
+		var cuerpo = result["collider"]
+		if cuerpo and cuerpo.has_method("recibir_danio"):
+			print("🎯 Golpeando: ", cuerpo.name)
+			
+			# Dirección del knockback (alejar del jugador)
+			var direccion_knockback = (cuerpo.global_position - global_position).normalized()
+			
+			# Aplicar daño al enemigo
+			cuerpo.recibir_danio(damage_ataque, direccion_knockback)
+			
+			# EFECTO DE GOLPE
+			if camera and camera.has_method("screen_shake"):
+				camera.screen_shake(4.0, 0.1)
 
 func get_attack_animation_name() -> String:
-	# VERIFICAR QUÉ ANIMACIONES DE ATAQUE EXISTEN
 	if animated_sprite.sprite_frames.has_animation("attack_" + str(combo_count + 1)):
 		return "attack_" + str(combo_count + 1)
 	elif animated_sprite.sprite_frames.has_animation("attack"):
 		return "attack"
 	else:
-		# SI NO HAY ANIMACIÓN DE ATAQUE, USAR WALK COMO FALLBACK
 		print("⚠️ No hay animación de ataque, usando 'walk'")
 		return "walk"
 
-func get_attack_duration(animation_name: String) -> float:
-	# DURACIONES PREDEFINIDAS PARA CADA ANIMACIÓN
-	var durations = {
-		"attack_1": 0.4,
-		"attack_2": 0.35,
-		"attack_3": 0.5,
-		"attack": 0.4,
-		"walk": 0.3  # Fallback
-	}
+# ------------------------------------------------------------------
+#  SISTEMA DE VIDA Y DAÑO
+# ------------------------------------------------------------------
+func recibir_danio(cantidad: int, direccion_knockback: Vector2 = Vector2.ZERO):
+	if esta_invulnerable or is_dashing:
+		return
 	
-	return durations.get(animation_name, 0.4)  # 0.4 segundos por defecto
+	# APLICAR DAÑO
+	vida_actual = max(0, vida_actual - cantidad)
+	print("💥 Daño recibido: ", cantidad, " - Vida: ", vida_actual, "/", vida_maxima)
+	
+	# KNOCKBACK
+	if direccion_knockback != Vector2.ZERO:
+		velocity = direccion_knockback.normalized() * knockback_fuerza
+	
+	# EFECTOS VISUALES
+	efecto_danio()
+	
+	# INVULNERABILIDAD TEMPORAL
+	activar_invulnerabilidad()
+	
+	# SCREEN SHAKE
+	if camera and camera.has_method("screen_shake"):
+		camera.screen_shake(10.0, 0.3)
+	
+	# VERIFICAR MUERTE
+	if vida_actual <= 0:
+		morir()
+
+func efecto_danio():
+	# Efecto de parpadeo en rojo
+	var tween = create_tween()
+	tween.tween_property(animated_sprite, "modulate", Color.RED, 0.1)
+	tween.tween_property(animated_sprite, "modulate", Color.WHITE, 0.1)
+	tween.set_loops(3)
+
+func activar_invulnerabilidad():
+	esta_invulnerable = true
+	tiempo_invulnerable = invulnerabilidad_tiempo
+	
+	# Efecto de parpadeo durante invulnerabilidad
+	var tween = create_tween()
+	tween.tween_property(animated_sprite, "modulate:a", 0.5, 0.1)
+	tween.tween_property(animated_sprite, "modulate:a", 1.0, 0.1)
+	tween.set_loops(6)
+
+func morir():
+	print("💀 Jugador murió")
+	
+	# EFECTO DE MUERTE
+	if camera and camera.has_method("screen_shake"):
+		camera.screen_shake(15.0, 0.5)
+	
+	# DESACTIVAR PERSONAJE
+	set_physics_process(false)
+	animated_sprite.play("idle")
+	animated_sprite.modulate = Color.DARK_RED
+	
+	# GAME OVER después de un momento
+	await get_tree().create_timer(2.0).timeout
+	print("🎮 GAME OVER")
+	# get_tree().reload_current_scene()  # Opcional: recargar escena
+
+func curar(cantidad: int):
+	vida_actual = min(vida_maxima, vida_actual + cantidad)
+	print("❤️ Curado: +", cantidad, " - Vida: ", vida_actual, "/", vida_maxima)
+
 # ------------------------------------------------------------------
 #  ANIMACIONES
 # ------------------------------------------------------------------
-# ------------------------------------------------------------------
-#  ANIMACIONES - SISTEMA CORREGIDO
-# ------------------------------------------------------------------
 func handle_animations(direction: float) -> void:
-	# Si está atacando, no cambiar animación hasta que termine
 	if is_attacking:
 		return
 	
-	# Si está en dash, mantener animación de dash
 	if is_dashing:
 		if animated_sprite.animation != "dash":
 			animated_sprite.play("dash")
 		return
 	
-	# WALL SLIDE
 	if is_wall_sliding:
 		if animated_sprite.animation != "wall_slide":
 			animated_sprite.play("wall_slide")
 		animated_sprite.flip_h = wall_direction > 0
 		return
 	
-	# EN EL AIRE
 	if not is_on_floor():
-		# Determinar si está subiendo o cayendo
 		if velocity.y < 0:
-			# SALTO (subiendo)
 			if animated_sprite.animation != "jump":
 				animated_sprite.play("jump")
 		else:
-			# CAÍDA
 			if animated_sprite.sprite_frames.has_animation("fall"):
 				if animated_sprite.animation != "fall":
 					animated_sprite.play("fall")
 			else:
-				# Si no tiene animación "fall", usar "jump"
 				if animated_sprite.animation != "jump":
 					animated_sprite.play("jump")
 		return
 	
-	# EN EL SUELO
 	if abs(velocity.x) > 10:
-		# CAMINANDO
 		if animated_sprite.animation != "walk":
 			animated_sprite.play("walk")
-		# Voltear sprite según dirección
 		animated_sprite.flip_h = direction < 0 if direction != 0 else animated_sprite.flip_h
 	else:
-		# QUIETO
 		if animated_sprite.animation != "idle":
 			animated_sprite.play("idle")
-
 
 # ------------------------------------------------------------------
 #  TRAIL DASH
@@ -357,3 +451,15 @@ func create_dash_trail() -> void:
 	tween.tween_property(trail, "modulate:a", 0.0, 0.3)
 	tween.parallel().tween_property(trail, "scale", Vector2(1.3, 1.3), 0.3)
 	tween.tween_callback(trail.queue_free)
+
+# ------------------------------------------------------------------
+#  DEBUG - TEST RÁPIDO
+# ------------------------------------------------------------------
+func _input(event: InputEvent) -> void:
+	# TEST: Tecla T para recibir daño de prueba
+	if event.is_action_pressed("ui_text_completion_accept"):  # Tecla Tab
+		recibir_danio(10, Vector2(1, -0.5))
+	
+	# TEST: Tecla Y para curar
+	if event.is_action_pressed("ui_focus_next"):  # Tecla
+		curar(15)
